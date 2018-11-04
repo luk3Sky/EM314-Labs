@@ -14,6 +14,6 @@ for i=500:500:5000
 end
 loglog(n,t3,'o');
 hold;
-%z=polyfit(n,t3,1);
-%c=(z(1)*(1:1:10))+z(2);
-%plot(n,c);
+z=polyfit(n,t3,1);
+c=(z(1)*(1:1:10))+z(2);
+plot(n,c);
