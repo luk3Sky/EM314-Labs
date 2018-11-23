@@ -1,4 +1,4 @@
-function result = newtons(f, dfdx, tol, x0, nmax),
+function [solution, residual, niter] = newtons_3(f, dfdx, tol, x0, nmax),
   prev_x = x0;
   niter = 0;
   next_x = 0;
@@ -20,5 +20,5 @@ function result = newtons(f, dfdx, tol, x0, nmax),
   solution = next_x;
   residual = f(next_x);
   %iterations = niter;
-  result = [solution, residual, niter];
+  %result = [solution, residual, niter];
 endfunction
