@@ -4,7 +4,6 @@ function solution = LagrangeInterpolation(x_array , y_array ),
   syms y;
   solution = 0;
   adders = 0;
-  disp(length);
   i = 1; j = 1;
   while j <= length,
     multipliers = 1;
@@ -15,7 +14,6 @@ function solution = LagrangeInterpolation(x_array , y_array ),
         continue;
       else,
         temp =  ( x - x_array(i) )/( x_array(j) - x_array(i) );
-        fprintf('%d %d\n', i, j);
         multipliers = multipliers*(temp);
       endif
       i++;
