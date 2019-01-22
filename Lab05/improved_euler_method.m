@@ -8,7 +8,4 @@ function y = improved_euler_method(f, y_init, upperBound, lowerBound, step),
     printf('%f \t%f \t%f \t%f\n', x, y(iter), tempVal, y(iter+1));
     iter = iter + 1;
   endfor
-  disp(y);
 endfunction
-
-
