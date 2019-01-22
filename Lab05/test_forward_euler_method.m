@@ -1,9 +1,8 @@
 pkg load symbolic;
 syms x y;
 f(x,y) = x + y;
-u = 0.02;
+##f(x,y) = -2*(x^3)+12*(x^2)-20*x+8.5;
+step = 0.02;
 y_init = 1;
-n_max = 10;
-dfdx = diff(f);
-forward_euler_method(function_handle(f(x,y)), function_handle (dfdx(x,y)), y_init,u, n_max);
+forward_euler_method(function_handle(f(x,y)), y_init, 0.1, 0, step);
 #disp(res);

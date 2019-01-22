@@ -1,4 +1,4 @@
-function y = forward_euler_method(f, y_init, upperBound, lowerBound, step),
+function y = improved_euler_method(f, y_init, upperBound, lowerBound, step),
   iter = 1;
   y(iter) = y_init;
   for x = lowerBound: step: upperBound - step,
