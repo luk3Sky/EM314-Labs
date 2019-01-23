@@ -7,6 +7,7 @@ f2 = b*sqrt(y);
 f(x,y) = (f1 - f2)/A;
 step = 0.2;
 y_init = 0;
+y_euler = forward_euler_method(function_handle(f(x,y)), y_init, 1.2, 0, 0.1);
 y_euler = forward_euler_method(function_handle(f(x,y)), y_init, 1.2, 0, step);
 y_improved_euler = improved_euler_method(function_handle(f(x,y)), y_init, 1.2, 0, step);
 y_runge_kutta = fourthOrder_RK_method(function_handle(f(x,y)), y_init, 1.2, 0, step);
