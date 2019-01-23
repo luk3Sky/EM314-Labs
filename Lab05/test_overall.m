@@ -1,8 +1,12 @@
 pkg load symbolic;
 syms x y;
+A = 1;
 b = 8;
-f(x,y) = 10 - b*sqrt(y);
+f1 = 10;
+f2 = b*sqrt(y);
+f(x,y) = (f1 - f2)/A;
 step = 0.2;
 y_init = 0;
 y_euler = forward_euler_method(function_handle(f(x,y)), y_init, 1.2, 0, step);
-#disp(res);
+y_improved_euler = improved_euler_method(function_handle(f(x,y)), y_init, 1.2, 0, step);
+y_runge_kutta = fourthOrder_RK_method(function_handle(f(x,y)), y_init, 1.2, 0, step);
