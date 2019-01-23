@@ -12,9 +12,8 @@ y_euler_2 = forward_euler_method(function_handle(f(x,y)), y_init, 1.2, 0, step);
 y_improved_euler = improved_euler_method(function_handle(f(x,y)), y_init, 1.2, 0, step);
 y_runge_kutta = fourthOrder_RK_method(function_handle(f(x,y)), y_init, 1.2, 0, step);
 
-x_vals_1 = 0: 0.1: 1.2;
-x_vals_2 = 0: 0.2: 1.2;
-disp(x_vals_1);
+x_vals_1 = 0: 0.1: 1.3;
+x_vals_2 = 0: 0.2: 1.4;
 hold on;
 plot(x_vals_1, y_euler_1,'r');
 plot(x_vals_2, y_euler_2,'c');

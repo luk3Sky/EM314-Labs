@@ -4,7 +4,7 @@ function y = fourthOrder_RK_method(f, y_init, upperBound, lowerBound, step),
   printf('\n\nUsing fourth order Runge Kutta method for step : %d\n', step);
   printf('xn \t\t| yn \t\t| y_n+1\n');
   disp('------------------------------------------');
-  for x = lowerBound: step: upperBound-step,
+  for x = lowerBound: step: upperBound,
     k0 = step*f( y(iter));
     k1 = step*f( y(iter)+k0/2);
     k2 = step*f( y(iter)+k1/2);
